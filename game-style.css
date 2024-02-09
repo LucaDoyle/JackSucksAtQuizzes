@@ -27,14 +27,54 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+.answer-area {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 767px) {
+    .answer-area {
+        grid-template-columns: none;
+    }
+}
+
+
+
 .answer {
     width: 200px;
     height: 50px;
     background-color: black;
-    display: inline-flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
+    border-radius: 20px;
     text-align: center;
-    margin: auto;
+    transition: all 0.2s;
+    border-color: rgb(21, 0, 207);
+    font-weight: bolder;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-origin: center center;
+    box-sizing: border-box;
+
+}
+
+.answer:hover {
+    border-style: solid;
+    border-width: 5px;
+    transform: scale(1.2) translateZ(0);
+}
+
+.questions-completed {
+    top: 5px;
+    left: 5px;
+    position: fixed;
+}
+
+.game-type {
+    top: 5px;
+    right: 5px;
+    position: fixed;
 }
