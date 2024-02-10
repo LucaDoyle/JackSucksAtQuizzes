@@ -13,13 +13,23 @@
         <div class="rounded-question-number">
             <span>1</span>
         </div>
-    <span class="question-title">What is the Wee Wee bush?</span>
+    <span class="question-title">If I were to PEGI 18, what would I PEGI?</span>
     </div>
     <div class="answer-area">
-        <div class="answer">Answer</div>
-        <div class="answer">Answer 2</div>
-        <div class="answer">Answer 3</div>
-        <div class="answer">Answer 4</div>
+        <div class="answer" id="incorrect">12</div>
+        <div class="answer" id="incorrect">7</div>
+        <div class="answer" id="incorrect">3</div>
+        <div class="answer" id="correct">18</div>
     </div>
+
 </body>
 </html>
+
+<script>
+document.getElementById('correct').onclick = function() {
+   alert("Correct!");
+};
+document.getElementById('incorrect').onclick = function() {
+   alert("Oops!");
+};
+</script>
