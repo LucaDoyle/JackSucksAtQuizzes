@@ -35,11 +35,7 @@ body {
     align-items: center;
 }
 
-@media only screen and (max-width: 767px) {
-    .answer-area {
-        grid-template-columns: none;
-    }
-}
+
 
 
 
@@ -79,3 +75,14 @@ body {
     right: 5px;
     position: fixed;
 }
+
+@media only screen and (max-width: 800px) {
+    .answer-area {
+        grid-template-columns: none;
+    }
+
+    .question-name-area {
+        margin-top: 30px;
+    }
+}
+
