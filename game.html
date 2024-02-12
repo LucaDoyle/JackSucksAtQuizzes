@@ -21,26 +21,36 @@
     <span class="question-title">What has Jack not had that much of?</span>
     </div>
     <div class="answer-area">
-        <div class="answer" id="incorrect1">Success</div>
-        <div class="answer" id="incorrect2">Subscribers</div>
-        <div class="answer" id="incorrect3">Shorts views</div>
-        <div class="answer" id="correct">Sex</div>
+        <div class="answer-button" onclick="showPopup(this)">Success</div>
+        <div class="answer-button" onclick="showPopup(this)">Subscribers</div>
+        <div class="answer-button" onclick="showPopup(this)">Shorts views</div>
+        <div class="answer-button" onclick="showPopup(this)">Sex</div>
+        <div class="popup-background" id="popup-background"></div>
+        <div class="popup" id="popup">
+            <div class="popup-content" id="popup-content">
+                <h1>Question result goes here</h1>
+                <p>Question result encouragement goes here</p>
+                <p>Correct answer goes here</p>
+                <button class="popup-button" id="next-question-btn">Next question</button>
+            </div>
+        </div>
     </div>
 
 </body>
 </html>
 
 <script>
-document.getElementById('correct').onclick = function() {
-   alert("Correct!");
-};
-document.getElementById('incorrect1').onclick = function() {
-   alert("Oops!");
-};
-document.getElementById('incorrect2').onclick = function() {
-   alert("Oops!");
-};
-document.getElementById('incorrect3').onclick = function() {
-   alert("Oops!");
-};
+var popup = document.getElementById('popup');
+var popupBackground = document.getElementById('popup-background');
+var btn = document.getElementsByClassName('answer-button');
+function showPopup(button) {
+    popup.style.display = 'block';
+    popupBackground.style.display = 'block';
+}
+
+document.getElementById('next-question-btn').onclick = function closePopup() {
+    popup.style.display = 'none';
+    popupBackground.style.display = 'none';
+}
+
 </script>
