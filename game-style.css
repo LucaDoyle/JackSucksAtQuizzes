@@ -4,6 +4,7 @@
 
 .question-name-area {
     text-align: center;
+    margin-top: 30px;
 }
 
 .rounded-question-number {
@@ -86,10 +87,14 @@ body {
     overflow: auto;
     position: fixed;
     background-color: rgba(0, 0, 0, 0.575);
+    transition: all 0.2s;
+    animation: fadeIn 0.2s;
 }
 
 
+
 .popup {
+    transition: all 0.2s;
     display: none;
     border: 5px rgb(21, 0, 207) solid;
     z-index: 1;
@@ -103,6 +108,28 @@ body {
     right: 0;
     margin: auto;
     background-color: rgb(41, 41, 41);
+    animation: fadeIn 0.2s;
+
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
 }
 
 .popup-content {
@@ -139,7 +166,9 @@ body {
         grid-template-columns: none;
     }
 
-    .question-name-area {
-        margin-top: 30px;
+
+
+    .popup {
+        width: 90%;
     }
 }
